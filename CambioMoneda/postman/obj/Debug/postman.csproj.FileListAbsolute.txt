@@ -1,0 +1,13 @@
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\bin\Debug\postman.exe.config
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\bin\Debug\postman.exe
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\bin\Debug\postman.pdb
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.Form1.resources
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.Properties.Resources.resources
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.csproj.GenerateResource.cache
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.csproj.CopyComplete
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.exe
+C:\Users\Sergio\Desktop\PROGRAMACION EN PARALELO\CambioMoneda\postman\obj\Debug\postman.pdb
