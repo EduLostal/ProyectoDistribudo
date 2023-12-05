@@ -3,7 +3,7 @@ using MongoDB.Bson;
 using System;
 using MongoDB.Driver;
 
-namespace CambioMoneda.Models
+namespace gestorFruteria.Models
 {
     public class Fruta
     {

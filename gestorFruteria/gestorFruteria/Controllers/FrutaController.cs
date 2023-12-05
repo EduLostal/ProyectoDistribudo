@@ -1,89 +1,77 @@
-﻿using System;
+﻿using gestorFruteria.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Threading.Tasks;
+using MongoDB.Bson;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace gestorFruteria.Controllers
 {
-    public class FrutaController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class FrutaController : ControllerBase
     {
-        // GET: Fruta
-        public ActionResult Index()
+        private readonly Enlace enlace;
+
+        public FrutaController(Enlace frutaManager)
         {
-            return View();
+            enlace = frutaManager;
         }
 
-        // GET: Fruta/Details/5
-        public ActionResult Details(int id)
+        // Obtener todas las frutas
+        [HttpGet]
+        public async Task<ActionResult<List<Fruta>>> GetAll()
         {
-            return View();
+            return await enlace.GetAllAsync();
         }
 
-        // GET: Fruta/Create
-        public ActionResult Create()
+        // Obtener una fruta específica por ID
+        [HttpGet("{id:length(24)}")]
+        public async Task<ActionResult<Fruta>> Get(string id)
         {
-            return View();
+            var fruta = await enlace.GetAsync(new ObjectId(id));
+            if (fruta == null)
+            {
+                return NotFound();
+            }
+
+            return fruta;
         }
 
-        // POST: Fruta/Create
+        // Añadir una nueva fruta
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public async Task<IActionResult> Post([FromBody] Fruta nuevaFruta)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            await enlace.AddAsync(nuevaFruta);
+            return CreatedAtAction(nameof(Get), new { id = nuevaFruta.Id.ToString() }, nuevaFruta);
         }
 
-        // GET: Fruta/Edit/5
-        public ActionResult Edit(int id)
+        // Actualizar una fruta existente
+        [HttpPut("{id:length(24)}")]
+        public async Task<IActionResult> Update(string id, [FromBody] Fruta frutaActualizada)
         {
-            return View();
+            var fruta = await enlace.GetAsync(new ObjectId(id));
+            if (fruta == null)
+            {
+                return NotFound();
+            }
+
+            await enlace.UpdateAsync(new ObjectId(id), frutaActualizada);
+            return NoContent();
         }
 
-        // POST: Fruta/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        // Eliminar una fruta por ID
+        [HttpDelete("{id:length(24)}")]
+        public async Task<IActionResult> Delete(string id)
         {
-            try
+            var fruta = await enlace.GetAsync(new ObjectId(id));
+            if (fruta == null)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                return NotFound();
             }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: Fruta/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Fruta/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            await enlace.DeleteAsync(new ObjectId(id));
+            return NoContent();
         }
     }
 }

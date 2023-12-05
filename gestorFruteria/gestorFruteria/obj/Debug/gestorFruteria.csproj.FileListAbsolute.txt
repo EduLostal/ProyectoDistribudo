@@ -1,0 +1,2 @@
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\gestorFruteria\obj\Debug\gestorFruteria.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\gestorFruteria\obj\Debug\gestorFruteria.csproj.CoreCompileInputs.cache
