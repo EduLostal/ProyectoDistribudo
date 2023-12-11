@@ -16,7 +16,8 @@ namespace gestorFruteria.Controllers
             var dbContext = new MongoDbContext(); 
             _frutaService = new FrutaService(dbContext);
         }
-
+        [HttpGet]
+        [Route("api/frutas")]
         public async Task<IHttpActionResult> GetAsync()
         {
             var frutas = await _frutaService.ObtenerTodasLasFrutasAsync();
@@ -24,7 +25,7 @@ namespace gestorFruteria.Controllers
         }
 
         [HttpGet]
-        [Route("api/fruta/{nombreFruta}")]
+        [Route("api/frutas/{nombreFruta}")]
         public async Task<IHttpActionResult> GetPorNombreAsync(string nombreFruta)
         {
             var fruta = await _frutaService.ObtenerFrutasPorNombreAsync(nombreFruta);
@@ -46,10 +47,28 @@ namespace gestorFruteria.Controllers
             {
                 return BadRequest("Datos de fruta invalidos...");
             }
+            if (_frutaService.ComprobacionBase(nuevaFruta.NombreFruta, nuevaFruta.Proveedor.Nombre, nuevaFruta.Venta.Cliente) ){ return BadRequest("Ya existe la fruta"); }
+            else { await _frutaService.CrearFrutaAsync(nuevaFruta); return Ok("Fruta creada con exito..."); }
 
-            await _frutaService.CrearFrutaAsync(nuevaFruta);
+            
+        }
 
-            return Ok("Fruta creada con exito...");
+        [HttpPut]
+        [Route("api/frutas/{id}")]
+        public async Task<IHttpActionResult> ModificarFruta(string id, [FromBody]Fruta actualizarfruta )
+        {
+            var exist = await _frutaService.ObtenerFrutasPorNombreAsync(actualizarfruta.NombreFruta);
+            if (exist == null) { return BadRequest("Fruta no existe"); }
+            else
+            {
+                if (!ObjectId.TryParse(id, out ObjectId objectId))
+                {
+                    return BadRequest("ID inválido.");
+                }
+                await _frutaService.ModificacionAsync(objectId, actualizarfruta);
+
+                return Ok("Fruta actualizada con éxito.");
+            }
         }
 
         [HttpDelete]

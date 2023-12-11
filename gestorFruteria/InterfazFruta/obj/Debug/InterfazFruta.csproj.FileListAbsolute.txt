@@ -1,0 +1,10 @@
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\bin\Debug\InterfazFruta.exe.config
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\bin\Debug\InterfazFruta.exe
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\bin\Debug\InterfazFruta.pdb
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.Form1.resources
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.Properties.Resources.resources
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.csproj.GenerateResource.cache
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.exe
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.pdb

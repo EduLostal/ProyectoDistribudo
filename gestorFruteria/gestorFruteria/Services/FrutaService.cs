@@ -2,8 +2,10 @@
 using gestorFruteria.ConexionBase;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace TuAplicacion.Services
 {
@@ -15,6 +17,22 @@ namespace TuAplicacion.Services
         {
             _dbContext = dbContext;
         }
+
+        
+
+        //Obtencion de nombre fruta
+        public bool ComprobacionBase(string NombreFruta, string NombreProovedor, string NombreCliente)
+        {
+            var frutaExistente = _dbContext.Frutas
+              .Find(f => f.NombreFruta == NombreFruta &&
+                         f.Proveedor.Nombre == NombreProovedor &&
+                         f.Venta.Cliente == NombreCliente);
+
+          
+            return frutaExistente != null;
+
+        }
+     
 
         //obtencion de todos los documentos
         public async Task<List<Fruta>> ObtenerTodasLasFrutasAsync()
@@ -32,6 +50,13 @@ namespace TuAplicacion.Services
         public async Task CrearFrutaAsync(Fruta nuevaFruta)
         {
             await _dbContext.Frutas.InsertOneAsync(nuevaFruta);
+        }
+        //Modificacion fruta
+        public async Task ModificacionAsync(ObjectId id,Fruta actualizafruta)
+        {
+            await _dbContext.Frutas.DeleteOneAsync(f => f.Id == id);
+            _ = CrearFrutaAsync(actualizafruta);
+           
         }
 
         //Eliminacion venta
