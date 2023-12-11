@@ -8,6 +8,8 @@ namespace CambioMoneda.Models
     public class Fruta
     {
 
+
+
         [BsonId]
         public ObjectId Id { get; set; }
 

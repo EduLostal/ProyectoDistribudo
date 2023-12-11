@@ -1,89 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using CambioMoneda.Models;
+using gestorFruteria.ConexionBase;
+using MongoDB.Bson;
+using System.Threading.Tasks;
+using System.Web.Http;
+using TuAplicacion.Services;
 
 namespace gestorFruteria.Controllers
 {
-    public class FrutaController : Controller
+    public class FrutaController : ApiController
     {
-        // GET: Fruta
-        public ActionResult Index()
+        private readonly FrutaService _frutaService;
+
+        public FrutaController()
         {
-            return View();
+            var dbContext = new MongoDbContext(); 
+            _frutaService = new FrutaService(dbContext);
         }
 
-        // GET: Fruta/Details/5
-        public ActionResult Details(int id)
+        public async Task<IHttpActionResult> GetAsync()
         {
-            return View();
+            var frutas = await _frutaService.ObtenerTodasLasFrutasAsync();
+            return Ok(frutas);
         }
 
-        // GET: Fruta/Create
-        public ActionResult Create()
+        [HttpGet]
+        [Route("api/fruta/{nombreFruta}")]
+        public async Task<IHttpActionResult> GetPorNombreAsync(string nombreFruta)
         {
-            return View();
+            var fruta = await _frutaService.ObtenerFrutasPorNombreAsync(nombreFruta);
+            if (fruta != null)
+            {
+                return Ok(fruta);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
-        // POST: Fruta/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [Route("api/frutas")]
+        public async Task<IHttpActionResult> CrearFruta(Fruta nuevaFruta)
         {
-            try
+            if (nuevaFruta == null)
             {
-                // TODO: Add insert logic here
+                return BadRequest("Datos de fruta invalidos...");
+            }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            await _frutaService.CrearFrutaAsync(nuevaFruta);
+
+            return Ok("Fruta creada con exito...");
         }
 
-        // GET: Fruta/Edit/5
-        public ActionResult Edit(int id)
+        [HttpDelete]
+        [Route("api/frutas/{id}")]
+        public async Task<IHttpActionResult> EliminarFruta(string id)
         {
-            return View();
+            if (!ObjectId.TryParse(id, out ObjectId objectId))
+            {
+                return BadRequest("ID inválido.");
+            }
+
+            await _frutaService.EliminarFrutaAsync(objectId);
+
+            return Ok("Fruta eliminada con éxito.");
         }
 
-        // POST: Fruta/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Fruta/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Fruta/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
+
+
