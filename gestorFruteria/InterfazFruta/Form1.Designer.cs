@@ -28,86 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.UrlText = new System.Windows.Forms.TextBox();
-            this.URL = new System.Windows.Forms.TextBox();
-            this.Body = new System.Windows.Forms.TextBox();
-            this.Envio = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(524, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // UrlText
-            // 
-            this.UrlText.Location = new System.Drawing.Point(684, 57);
-            this.UrlText.Multiline = true;
-            this.UrlText.Name = "UrlText";
-            this.UrlText.Size = new System.Drawing.Size(271, 27);
-            this.UrlText.TabIndex = 1;
-            // 
-            // URL
-            // 
-            this.URL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.URL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.URL.Location = new System.Drawing.Point(632, 57);
-            this.URL.Multiline = true;
-            this.URL.Name = "URL";
-            this.URL.ReadOnly = true;
-            this.URL.Size = new System.Drawing.Size(46, 28);
-            this.URL.TabIndex = 2;
-            this.URL.Text = "URL";
-            // 
-            // Body
-            // 
-            this.Body.Location = new System.Drawing.Point(335, 198);
-            this.Body.Multiline = true;
-            this.Body.Name = "Body";
-            this.Body.Size = new System.Drawing.Size(466, 293);
-            this.Body.TabIndex = 3;
-            // 
-            // Envio
-            // 
-            this.Envio.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Envio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Envio.Location = new System.Drawing.Point(820, 169);
-            this.Envio.Name = "Envio";
-            this.Envio.Size = new System.Drawing.Size(88, 71);
-            this.Envio.TabIndex = 4;
-            this.Envio.Text = "SEND";
-            this.Envio.UseVisualStyleBackColor = false;
-            this.Envio.Click += new System.EventHandler(this.Envio_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::InterfazFruta.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(356, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 246);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(405, 388);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 77);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "INICIO DE SESION";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(302, 300);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(401, 33);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "BIENVENIDO A FRUIT APP";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(1001, 555);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Envio);
-            this.Controls.Add(this.Body);
-            this.Controls.Add(this.URL);
-            this.Controls.Add(this.UrlText);
-            this.Controls.Add(this.comboBox1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "AlmacenFruta";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -117,13 +90,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox UrlText;
-        private System.Windows.Forms.TextBox URL;
-        private System.Windows.Forms.TextBox Body;
-        private System.Windows.Forms.Button Envio;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

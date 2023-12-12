@@ -8,3 +8,7 @@ C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\Inte
 C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.csproj.CoreCompileInputs.cache
 C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.exe
 C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.pdb
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.app.resources
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sergio\Desktop\PROYECTO PARALELO\ProyectoDistribudo\gestorFruteria\InterfazFruta\obj\Debug\InterfazFruta.csproj.CopyComplete

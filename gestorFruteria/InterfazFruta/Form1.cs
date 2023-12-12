@@ -17,59 +17,16 @@ namespace InterfazFruta
         public Form1()
         {
             InitializeComponent();
-            comboBox1.Items.Add("POST");
-            comboBox1.Items.Add("GET");
-            comboBox1.Items.Add("PUT");
-            comboBox1.Items.Add("DELETE");
-            comboBox1.SelectedItem = "POST";
+            
         }
 
-        private async void Envio_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var client = new HttpClient();
-
-
-            if (comboBox1.SelectedItem.ToString() == "POST")
-            {
-                var request = new HttpRequestMessage(HttpMethod.Post, UrlText.Text);
-                var content = new StringContent(Body.Text, null, "application/json");
-                request.Content = content;
-                var response = await client.SendAsync(request);
-                response.EnsureSuccessStatusCode();
-                Body.Text = await response.Content.ReadAsStringAsync();
-
-            }
-            else if (comboBox1.SelectedItem.ToString() == "GET")
-            {
-
-                var request = new HttpRequestMessage(HttpMethod.Get, UrlText.Text);
-                var response = await client.SendAsync(request);
-                response.EnsureSuccessStatusCode();
-                Body.Text = await response.Content.ReadAsStringAsync();
-
-
-            }
-            else if (comboBox1.SelectedItem.ToString() == "PUT")
-            {
-
-
-
-
-               
-
-            }
-            else if (comboBox1.SelectedItem.ToString() == "DELETE")
-            {
-
-
-
-              
-
-
-
-               
-            }
-
+            app frm = new app();
+            frm.Show();
+            this.Hide();
         }
+
+      
     }
 }
