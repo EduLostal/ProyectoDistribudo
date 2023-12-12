@@ -28,8 +28,9 @@ namespace InterfazFruta
 
         public async void Alldata() 
         {
+           
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, textBox11.Text);
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44396/api/frutas");
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
 
@@ -55,6 +56,9 @@ namespace InterfazFruta
             
         }
 
-      
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
