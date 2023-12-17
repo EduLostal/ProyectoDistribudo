@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace TuAplicacion.Services
 {
@@ -23,12 +24,12 @@ namespace TuAplicacion.Services
         //Obtencion de nombre fruta
         public bool ComprobacionBase(string NombreFruta, string NombreProovedor, string NombreCliente)
         {
-            var frutaExistente = _dbContext.Frutas
-              .Find(f => f.NombreFruta == NombreFruta &&
-                         f.Proveedor.Nombre == NombreProovedor &&
-                         f.Venta.Cliente == NombreCliente);
 
-            
+            var filtro = Builders<Fruta>.Filter.Eq(f => f.NombreFruta, NombreFruta) &
+                  Builders<Fruta>.Filter.Eq(f => f.Proveedor.Nombre, NombreProovedor) &
+                  Builders<Fruta>.Filter.Eq(f => f.Venta.Cliente, NombreCliente);
+
+            var frutaExistente = _dbContext.Frutas.Find(filtro).FirstOrDefault();
 
             return frutaExistente != null;
 
@@ -53,11 +54,13 @@ namespace TuAplicacion.Services
             await _dbContext.Frutas.InsertOneAsync(nuevaFruta);
         }
         //Modificacion fruta
-        public async Task ModificacionAsync(ObjectId id,Fruta actualizafruta)
-        {
-            await _dbContext.Frutas.DeleteOneAsync(f => f.Id == id);
-            _ = CrearFrutaAsync(actualizafruta);
+        public async Task ModificacionAsync(ObjectId id,Fruta actualizaFruta)
+        {                       
+            actualizaFruta.Id = id;
+
            
+            await _dbContext.Frutas.ReplaceOneAsync(f => f.Id == id, actualizaFruta);
+
         }
 
         //Eliminacion venta

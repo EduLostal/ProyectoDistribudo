@@ -64,6 +64,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -296,6 +297,7 @@
             this.Modificar.TabIndex = 24;
             this.Modificar.Text = "Modificar";
             this.Modificar.UseVisualStyleBackColor = false;
+            this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
             // Borrar
             // 
@@ -308,6 +310,7 @@
             this.Borrar.TabIndex = 25;
             this.Borrar.Text = "Borrar";
             this.Borrar.UseVisualStyleBackColor = false;
+            this.Borrar.Click += new System.EventHandler(this.Borrar_Click);
             // 
             // Buscar
             // 
@@ -320,6 +323,7 @@
             this.Buscar.TabIndex = 28;
             this.Buscar.Text = "Buscar Fruta";
             this.Buscar.UseVisualStyleBackColor = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // BoxNameFrutaGet
             // 
@@ -380,7 +384,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(759, 311);
+            this.label18.Location = new System.Drawing.Point(788, 311);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 20);
@@ -391,7 +395,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(483, 311);
+            this.label19.Location = new System.Drawing.Point(492, 311);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(127, 20);
@@ -409,12 +413,22 @@
             this.label20.TabIndex = 38;
             this.label20.Text = "FRUTA:";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(288, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(166, 16);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Solo modificar o borrar";
+            // 
             // app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(1516, 618);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -498,5 +512,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label14;
     }
 }

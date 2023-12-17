@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using Amazon.Runtime.Internal;
 
 namespace InterfazFruta
 {
@@ -21,6 +22,7 @@ namespace InterfazFruta
         }
         private async void Guardar_Click(object sender, EventArgs e)
         {
+            string responseContent = "";
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44396/api/frutas");
             var content = new StringContent("{\r\n        \"Id\": \""+ BoxID.Text +"\",\r\n        \"NombreFruta\": \""+ BoxNameFruta.Text +"\",\r\n " +
@@ -28,24 +30,82 @@ namespace InterfazFruta
                 "\"Nombre\": \"" +BoxNameProovedor.Text +"\",\r\n            \"Contacto\": \""+ BoxContacto.Text +"\",\r\n   " +
                 "\"Telefono\": \""+ BoxTlf.Text +"\"\r\n        },\r\n        \"Venta\": {\r\n            \"Cliente\": \""+ BoxCliente.Text +"\",\r\n " +
                 "\"CantidadVendida\": \""+ BoxCantidadVendida.Text +"\",\r\n            \"PrecioVenta\": \""+ BoxPrecioVenta.Text +"\",\r\n            " +
-                "\"FechaVenta\": \""+ BoxTime.Text +"\"\r\n        }\r\n    }", null, "application/json");
+                "\"FechaVenta\": \""+ BoxTime.Value.ToString("o") + "\"\r\n        }\r\n    }", null, "application/json");
             request.Content = content;
             var response = await client.SendAsync(request);
             
             if (!response.IsSuccessStatusCode)
             {
                 MessageBox.Show($"Error: {response.StatusCode}");
-                Console.WriteLine($"Error: {response.StatusCode}");
-                string responseContent = await response.Content.ReadAsStringAsync();
-                MessageBox.Show($"Detalles del error: {responseContent}");
-                Console.WriteLine($"Detalles del error: {responseContent}");
+                
+                responseContent = await response.Content.ReadAsStringAsync();
+               
+                
                 return;
             }
-            //response.EnsureSuccessStatusCode();
-            //string messageBox = await response.Content.ReadAsStringAsync();
-            //MessageBox.Show(messageBox);
+            
+            MessageBox.Show(responseContent);
             Alldata();
 
+        }
+        private async void Borrar_Click(object sender, EventArgs e)
+        {
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Delete, "https://localhost:44396/api/frutas/" + BoxID.Text);
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            Alldata();
+            MessageBox.Show(await response.Content.ReadAsStringAsync());
+        }
+        private async void Modificar_Click(object sender, EventArgs e)
+        {
+            string responseContent = "";
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Put, "https://localhost:44396/api/frutas/"+ BoxID.Text);
+            var content = new StringContent("{\r\n        \"Id\": \"" + BoxID.Text + "\",\r\n        \"NombreFruta\": \"" + BoxNameFruta.Text + "\",\r\n " +
+                "\"Cantidad\": \"" + BoxCantidad.Text + "\" ,\r\n        \"PrecioPorUnidad\": \"" + BoxPrecioUnidad.Text + "\",\r\n        \"Proveedor\": {\r\n " +
+                "\"Nombre\": \"" + BoxNameProovedor.Text + "\",\r\n            \"Contacto\": \"" + BoxContacto.Text + "\",\r\n   " +
+                "\"Telefono\": \"" + BoxTlf.Text + "\"\r\n        },\r\n        \"Venta\": {\r\n            \"Cliente\": \"" + BoxCliente.Text + "\",\r\n " +
+                "\"CantidadVendida\": \"" + BoxCantidadVendida.Text + "\",\r\n            \"PrecioVenta\": \"" + BoxPrecioVenta.Text + "\",\r\n            " +
+                "\"FechaVenta\": \"" + BoxTime.Value.ToString("o") + "\"\r\n        }\r\n    }", null, "application/json");
+            request.Content = content;
+            var response = await client.SendAsync(request);
+            if (!response.IsSuccessStatusCode)
+            {
+                MessageBox.Show($"Error: {response.StatusCode}");
+
+                responseContent = await response.Content.ReadAsStringAsync();
+                
+                
+                return;
+            }
+            MessageBox.Show("Modificado..");
+            Alldata();
+           
+        
+        }
+        private async void Buscar_Click(object sender, EventArgs e)
+        {
+            
+            if (BoxNameFrutaGet.Text != "")
+            {
+                var client = new HttpClient();
+                var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44396/api/frutas/" + BoxNameFrutaGet.Text);
+                var response = await client.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                string jsonResponse = await response.Content.ReadAsStringAsync();
+                if (jsonResponse != "[]")
+                {
+                    GetFruta gtfruta = new GetFruta();
+                    gtfruta.SetJsonData(jsonResponse);
+                    gtfruta.GetFrutaTabla();
+                    gtfruta.Show();
+                }
+                else { MessageBox.Show("No existe fruta"); }
+            }
+            else { MessageBox.Show("No has introducido datos"); }
+            
         }
 
 
@@ -114,5 +174,6 @@ namespace InterfazFruta
            return dataTable;
         }
 
-  }
+        
+    }
 }

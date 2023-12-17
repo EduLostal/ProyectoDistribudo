@@ -47,7 +47,7 @@ namespace gestorFruteria.Controllers
             {
                 return BadRequest("Datos de fruta invalidos...");
             }
-            if (!_frutaService.ComprobacionBase(nuevaFruta.NombreFruta, nuevaFruta.Proveedor.Nombre, nuevaFruta.Venta.Cliente) ){ return BadRequest("Ya existe la fruta"); }
+            if (_frutaService.ComprobacionBase(nuevaFruta.NombreFruta, nuevaFruta.Proveedor.Nombre, nuevaFruta.Venta.Cliente) ){ return BadRequest("Ya existe la fruta"); }
             else { await _frutaService.CrearFrutaAsync(nuevaFruta); return Ok("Fruta creada con exito..."); }
 
             
