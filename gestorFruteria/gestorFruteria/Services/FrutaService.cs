@@ -28,7 +28,8 @@ namespace TuAplicacion.Services
                          f.Proveedor.Nombre == NombreProovedor &&
                          f.Venta.Cliente == NombreCliente);
 
-          
+            
+
             return frutaExistente != null;
 
         }

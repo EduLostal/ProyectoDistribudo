@@ -28,17 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(app));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,39 +42,25 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.BoxNameFruta = new System.Windows.Forms.TextBox();
+            this.BoxCantidad = new System.Windows.Forms.TextBox();
+            this.BoxPrecioUnidad = new System.Windows.Forms.TextBox();
+            this.BoxTlf = new System.Windows.Forms.TextBox();
+            this.BoxContacto = new System.Windows.Forms.TextBox();
+            this.BoxNameProovedor = new System.Windows.Forms.TextBox();
+            this.BoxPrecioVenta = new System.Windows.Forms.TextBox();
+            this.BoxCantidadVendida = new System.Windows.Forms.TextBox();
+            this.BoxCliente = new System.Windows.Forms.TextBox();
+            this.Guardar = new System.Windows.Forms.Button();
+            this.Modificar = new System.Windows.Forms.Button();
+            this.Borrar = new System.Windows.Forms.Button();
+            this.Buscar = new System.Windows.Forms.Button();
+            this.BoxNameFrutaGet = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.BoxID = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreFruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioPorUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxTime = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -225,171 +200,152 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Fecha/Venta:";
             // 
-            // textBox1
+            // BoxNameFruta
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(170, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 22);
-            this.textBox1.TabIndex = 13;
+            this.BoxNameFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxNameFruta.Location = new System.Drawing.Point(170, 101);
+            this.BoxNameFruta.Name = "BoxNameFruta";
+            this.BoxNameFruta.Size = new System.Drawing.Size(178, 22);
+            this.BoxNameFruta.TabIndex = 13;
             // 
-            // textBox2
+            // BoxCantidad
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(170, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 22);
-            this.textBox2.TabIndex = 14;
+            this.BoxCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxCantidad.Location = new System.Drawing.Point(170, 147);
+            this.BoxCantidad.Name = "BoxCantidad";
+            this.BoxCantidad.Size = new System.Drawing.Size(178, 22);
+            this.BoxCantidad.TabIndex = 14;
             // 
-            // textBox3
+            // BoxPrecioUnidad
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(170, 188);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 22);
-            this.textBox3.TabIndex = 15;
+            this.BoxPrecioUnidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxPrecioUnidad.Location = new System.Drawing.Point(170, 188);
+            this.BoxPrecioUnidad.Name = "BoxPrecioUnidad";
+            this.BoxPrecioUnidad.Size = new System.Drawing.Size(178, 22);
+            this.BoxPrecioUnidad.TabIndex = 15;
             // 
-            // textBox4
+            // BoxTlf
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(476, 194);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 22);
-            this.textBox4.TabIndex = 18;
+            this.BoxTlf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxTlf.Location = new System.Drawing.Point(476, 194);
+            this.BoxTlf.Name = "BoxTlf";
+            this.BoxTlf.Size = new System.Drawing.Size(178, 22);
+            this.BoxTlf.TabIndex = 18;
             // 
-            // textBox5
+            // BoxContacto
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(476, 147);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 22);
-            this.textBox5.TabIndex = 17;
+            this.BoxContacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxContacto.Location = new System.Drawing.Point(476, 147);
+            this.BoxContacto.Name = "BoxContacto";
+            this.BoxContacto.Size = new System.Drawing.Size(178, 22);
+            this.BoxContacto.TabIndex = 17;
             // 
-            // textBox6
+            // BoxNameProovedor
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(476, 101);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 22);
-            this.textBox6.TabIndex = 16;
+            this.BoxNameProovedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxNameProovedor.Location = new System.Drawing.Point(476, 101);
+            this.BoxNameProovedor.Name = "BoxNameProovedor";
+            this.BoxNameProovedor.Size = new System.Drawing.Size(178, 22);
+            this.BoxNameProovedor.TabIndex = 16;
             // 
-            // textBox7
+            // BoxPrecioVenta
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(836, 194);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 22);
-            this.textBox7.TabIndex = 21;
+            this.BoxPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxPrecioVenta.Location = new System.Drawing.Point(836, 194);
+            this.BoxPrecioVenta.Name = "BoxPrecioVenta";
+            this.BoxPrecioVenta.Size = new System.Drawing.Size(178, 22);
+            this.BoxPrecioVenta.TabIndex = 21;
             // 
-            // textBox8
+            // BoxCantidadVendida
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(836, 147);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(178, 22);
-            this.textBox8.TabIndex = 20;
+            this.BoxCantidadVendida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxCantidadVendida.Location = new System.Drawing.Point(836, 147);
+            this.BoxCantidadVendida.Name = "BoxCantidadVendida";
+            this.BoxCantidadVendida.Size = new System.Drawing.Size(178, 22);
+            this.BoxCantidadVendida.TabIndex = 20;
             // 
-            // textBox9
+            // BoxCliente
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(836, 101);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(178, 22);
-            this.textBox9.TabIndex = 19;
+            this.BoxCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxCliente.Location = new System.Drawing.Point(836, 101);
+            this.BoxCliente.Name = "BoxCliente";
+            this.BoxCliente.Size = new System.Drawing.Size(178, 22);
+            this.BoxCliente.TabIndex = 19;
             // 
-            // button1
+            // Guardar
             // 
-            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Honeydew;
-            this.button1.Location = new System.Drawing.Point(52, 238);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 48);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Guardar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guardar.ForeColor = System.Drawing.Color.Honeydew;
+            this.Guardar.Location = new System.Drawing.Point(52, 238);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(201, 48);
+            this.Guardar.TabIndex = 23;
+            this.Guardar.Text = "Guardar";
+            this.Guardar.UseVisualStyleBackColor = false;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
-            // button2
+            // Modificar
             // 
-            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Honeydew;
-            this.button2.Location = new System.Drawing.Point(260, 238);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 48);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Modificar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Modificar.ForeColor = System.Drawing.Color.Honeydew;
+            this.Modificar.Location = new System.Drawing.Point(260, 238);
+            this.Modificar.Name = "Modificar";
+            this.Modificar.Size = new System.Drawing.Size(201, 48);
+            this.Modificar.TabIndex = 24;
+            this.Modificar.Text = "Modificar";
+            this.Modificar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // Borrar
             // 
-            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Honeydew;
-            this.button3.Location = new System.Drawing.Point(467, 238);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 48);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Borrar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Borrar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Borrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Borrar.ForeColor = System.Drawing.Color.Honeydew;
+            this.Borrar.Location = new System.Drawing.Point(467, 238);
+            this.Borrar.Name = "Borrar";
+            this.Borrar.Size = new System.Drawing.Size(201, 48);
+            this.Borrar.TabIndex = 25;
+            this.Borrar.Text = "Borrar";
+            this.Borrar.UseVisualStyleBackColor = false;
             // 
-            // label14
+            // Buscar
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1051, 57);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 20);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "URL:";
+            this.Buscar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscar.ForeColor = System.Drawing.Color.Honeydew;
+            this.Buscar.Location = new System.Drawing.Point(1225, 168);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(201, 48);
+            this.Buscar.TabIndex = 28;
+            this.Buscar.Text = "Buscar Fruta";
+            this.Buscar.UseVisualStyleBackColor = false;
             // 
-            // textBox11
+            // BoxNameFrutaGet
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(1129, 55);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(309, 22);
-            this.textBox11.TabIndex = 27;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Honeydew;
-            this.button4.Location = new System.Drawing.Point(1196, 179);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 48);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Buscar Fruta";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Location = new System.Drawing.Point(1207, 141);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(178, 22);
-            this.textBox12.TabIndex = 30;
+            this.BoxNameFrutaGet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxNameFrutaGet.Location = new System.Drawing.Point(1236, 130);
+            this.BoxNameFrutaGet.Name = "BoxNameFrutaGet";
+            this.BoxNameFrutaGet.Size = new System.Drawing.Size(178, 22);
+            this.BoxNameFrutaGet.TabIndex = 30;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1086, 144);
+            this.label15.Location = new System.Drawing.Point(1115, 133);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 16);
             this.label15.TabIndex = 29;
             this.label15.Text = "Nombre Fruta:";
             // 
-            // textBox13
+            // BoxID
             // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Location = new System.Drawing.Point(91, 14);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(178, 22);
-            this.textBox13.TabIndex = 32;
+            this.BoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BoxID.Location = new System.Drawing.Point(91, 14);
+            this.BoxID.Name = "BoxID";
+            this.BoxID.Size = new System.Drawing.Size(178, 22);
+            this.BoxID.TabIndex = 32;
             // 
             // label16
             // 
@@ -403,152 +359,22 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.NombreFruta,
-            this.Cantidad,
-            this.PrecioPorUnidad,
-            this.Nombre,
-            this.Contacto,
-            this.Telefono,
-            this.Cliente,
-            this.CantidadVendida,
-            this.PrecioVenta,
-            this.FechaVenta});
             this.dataGridView1.Location = new System.Drawing.Point(52, 334);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1195, 272);
             this.dataGridView1.TabIndex = 33;
             // 
-            // label17
+            // BoxTime
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(276, 16);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(200, 16);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "(Solo para modificar/borrar)";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(836, 240);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(178, 22);
-            this.dateTimePicker1.TabIndex = 35;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 47;
-            // 
-            // NombreFruta
-            // 
-            this.NombreFruta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.NombreFruta.DefaultCellStyle = dataGridViewCellStyle2;
-            this.NombreFruta.HeaderText = "Nombre Fruta";
-            this.NombreFruta.Name = "NombreFruta";
-            this.NombreFruta.ReadOnly = true;
-            this.NombreFruta.Width = 115;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 94;
-            // 
-            // PrecioPorUnidad
-            // 
-            this.PrecioPorUnidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.PrecioPorUnidad.DefaultCellStyle = dataGridViewCellStyle4;
-            this.PrecioPorUnidad.HeaderText = "Precio/Unidad";
-            this.PrecioPorUnidad.Name = "PrecioPorUnidad";
-            this.PrecioPorUnidad.ReadOnly = true;
-            this.PrecioPorUnidad.Width = 132;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 87;
-            // 
-            // Contacto
-            // 
-            this.Contacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Contacto.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Contacto.HeaderText = "Contacto";
-            this.Contacto.Name = "Contacto";
-            this.Contacto.ReadOnly = true;
-            this.Contacto.Width = 93;
-            // 
-            // Telefono
-            // 
-            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Telefono.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 94;
-            // 
-            // Cliente
-            // 
-            this.Cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Cliente.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 80;
-            // 
-            // CantidadVendida
-            // 
-            this.CantidadVendida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CantidadVendida.DefaultCellStyle = dataGridViewCellStyle9;
-            this.CantidadVendida.HeaderText = "Cantaidad/Vendida";
-            this.CantidadVendida.Name = "CantidadVendida";
-            this.CantidadVendida.ReadOnly = true;
-            this.CantidadVendida.Width = 166;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.PrecioVenta.DefaultCellStyle = dataGridViewCellStyle10;
-            this.PrecioVenta.HeaderText = "Precio/Venta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Width = 122;
-            // 
-            // FechaVenta
-            // 
-            this.FechaVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FechaVenta.DefaultCellStyle = dataGridViewCellStyle11;
-            this.FechaVenta.HeaderText = "Fecha/Venta";
-            this.FechaVenta.Name = "FechaVenta";
-            this.FechaVenta.ReadOnly = true;
-            this.FechaVenta.Width = 120;
+            this.BoxTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.BoxTime.Location = new System.Drawing.Point(836, 240);
+            this.BoxTime.Name = "BoxTime";
+            this.BoxTime.Size = new System.Drawing.Size(178, 22);
+            this.BoxTime.TabIndex = 35;
             // 
             // label18
             // 
@@ -592,28 +418,25 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.BoxTime);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.BoxID);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.BoxNameFrutaGet);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Buscar);
+            this.Controls.Add(this.Borrar);
+            this.Controls.Add(this.Modificar);
+            this.Controls.Add(this.Guardar);
+            this.Controls.Add(this.BoxPrecioVenta);
+            this.Controls.Add(this.BoxCantidadVendida);
+            this.Controls.Add(this.BoxCliente);
+            this.Controls.Add(this.BoxTlf);
+            this.Controls.Add(this.BoxContacto);
+            this.Controls.Add(this.BoxNameProovedor);
+            this.Controls.Add(this.BoxPrecioUnidad);
+            this.Controls.Add(this.BoxCantidad);
+            this.Controls.Add(this.BoxNameFruta);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -653,39 +476,25 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox BoxNameFruta;
+        private System.Windows.Forms.TextBox BoxCantidad;
+        private System.Windows.Forms.TextBox BoxPrecioUnidad;
+        private System.Windows.Forms.TextBox BoxTlf;
+        private System.Windows.Forms.TextBox BoxContacto;
+        private System.Windows.Forms.TextBox BoxNameProovedor;
+        private System.Windows.Forms.TextBox BoxPrecioVenta;
+        private System.Windows.Forms.TextBox BoxCantidadVendida;
+        private System.Windows.Forms.TextBox BoxCliente;
+        private System.Windows.Forms.Button Guardar;
+        private System.Windows.Forms.Button Modificar;
+        private System.Windows.Forms.Button Borrar;
+        private System.Windows.Forms.Button Buscar;
+        private System.Windows.Forms.TextBox BoxNameFrutaGet;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox BoxID;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreFruta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioPorUnidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contacto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadVendida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaVenta;
+        private System.Windows.Forms.DateTimePicker BoxTime;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
