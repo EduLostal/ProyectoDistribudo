@@ -20,6 +20,7 @@ namespace InterfazFruta
             
         }
 
+        //Abre ventana principal
         private void button1_Click(object sender, EventArgs e)
         {
             app frm = new app();

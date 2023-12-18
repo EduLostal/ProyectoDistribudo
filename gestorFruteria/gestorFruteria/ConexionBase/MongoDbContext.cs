@@ -1,4 +1,4 @@
-﻿using CambioMoneda.Models;
+﻿using gestorFruteria.Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
@@ -12,6 +12,7 @@ namespace gestorFruteria.ConexionBase
     {
         public IMongoCollection<Fruta> Frutas { get; set; }
 
+        //Cambiar datos si tienes otro puerto u otra base
         public MongoDbContext()
         {
             var client = new MongoClient("mongodb://localhost:27017");

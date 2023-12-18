@@ -21,15 +21,20 @@ namespace InterfazFruta
         }
         public string JsonData { get; set; }
 
+        //Metodo para recibir el json con los datos de la fruta a buscar
         public void SetJsonData(string jsonData)
         {
             JsonData = jsonData;
                 
         }
+
+        //Boton aceptar para cerrar ventana
         private void buttonAcept_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        //Metodo para recibir el json y crear tabla de datos
         public void GetFrutaTabla()
         {
             if (string.IsNullOrEmpty(JsonData))

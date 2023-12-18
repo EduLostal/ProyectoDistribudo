@@ -20,9 +20,10 @@ namespace InterfazFruta
             
 
         }
+        //Boton guardar,introducir todos los datos excepto ID(POST)
         private async void Guardar_Click(object sender, EventArgs e)
         {
-            string responseContent = "";
+            //string responseContent = "";
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44396/api/frutas");
             var content = new StringContent("{\r\n        \"Id\": \""+ BoxID.Text +"\",\r\n        \"NombreFruta\": \""+ BoxNameFruta.Text +"\",\r\n " +
@@ -36,18 +37,20 @@ namespace InterfazFruta
             
             if (!response.IsSuccessStatusCode)
             {
-                MessageBox.Show($"Error: {response.StatusCode}");
+                MessageBox.Show("Ya existe la fruta");
                 
-                responseContent = await response.Content.ReadAsStringAsync();
+                //responseContent = await response.Content.ReadAsStringAsync();
                
                 
                 return;
             }
             
-            MessageBox.Show(responseContent);
+            MessageBox.Show("Fruta guardada");
             Alldata();
 
         }
+
+        //Boton borrar,solo introducir ID(DELETE)
         private async void Borrar_Click(object sender, EventArgs e)
         {
             var client = new HttpClient();
@@ -57,6 +60,8 @@ namespace InterfazFruta
             Alldata();
             MessageBox.Show(await response.Content.ReadAsStringAsync());
         }
+
+        //Boton modificar,introducir ID y datos a modificar(PUT)
         private async void Modificar_Click(object sender, EventArgs e)
         {
             string responseContent = "";
@@ -84,6 +89,8 @@ namespace InterfazFruta
            
         
         }
+
+        //Boton buscar,solo introducir nombre fruta y saldra una ventana con los datos de la fruta(GET)
         private async void Buscar_Click(object sender, EventArgs e)
         {
             
@@ -108,7 +115,7 @@ namespace InterfazFruta
             
         }
 
-
+        //Metodo en el cual usa el GET para mostrar la base entera y que implementa todos los botones para tener tabla actualizada
         public async void Alldata() 
         {
            
@@ -132,11 +139,13 @@ namespace InterfazFruta
            
             
         }      
+
+        //Creacion tabla datos
        private DataTable LoadJsonToDataTable(string jsonFilePath)
        {
           DataTable dataTable = new DataTable();
 
-           // Define las columnas del DataTable
+           
           dataTable.Columns.Add("ID", typeof(string));
           dataTable.Columns.Add("NombreFruta", typeof(string));
           dataTable.Columns.Add("Cantidad", typeof(int));
