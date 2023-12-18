@@ -70,6 +70,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(48, 57);
@@ -81,6 +82,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(387, 57);
@@ -92,6 +94,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(681, 57);
@@ -103,6 +106,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(49, 104);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -113,6 +117,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(388, 104);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -123,6 +128,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(49, 190);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -133,6 +139,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(49, 153);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -143,6 +150,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(388, 153);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -153,6 +161,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(388, 194);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -163,6 +172,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(682, 194);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -173,6 +183,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(682, 153);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -183,6 +194,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(682, 104);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -193,6 +205,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(682, 240);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -203,6 +216,7 @@
             // 
             // BoxNameFruta
             // 
+            this.BoxNameFruta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxNameFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxNameFruta.Location = new System.Drawing.Point(170, 101);
             this.BoxNameFruta.Name = "BoxNameFruta";
@@ -211,6 +225,7 @@
             // 
             // BoxCantidad
             // 
+            this.BoxCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxCantidad.Location = new System.Drawing.Point(170, 147);
             this.BoxCantidad.Name = "BoxCantidad";
@@ -219,6 +234,7 @@
             // 
             // BoxPrecioUnidad
             // 
+            this.BoxPrecioUnidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxPrecioUnidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxPrecioUnidad.Location = new System.Drawing.Point(170, 188);
             this.BoxPrecioUnidad.Name = "BoxPrecioUnidad";
@@ -227,6 +243,7 @@
             // 
             // BoxTlf
             // 
+            this.BoxTlf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxTlf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxTlf.Location = new System.Drawing.Point(476, 194);
             this.BoxTlf.Name = "BoxTlf";
@@ -235,6 +252,7 @@
             // 
             // BoxContacto
             // 
+            this.BoxContacto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxContacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxContacto.Location = new System.Drawing.Point(476, 147);
             this.BoxContacto.Name = "BoxContacto";
@@ -243,6 +261,7 @@
             // 
             // BoxNameProovedor
             // 
+            this.BoxNameProovedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxNameProovedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxNameProovedor.Location = new System.Drawing.Point(476, 101);
             this.BoxNameProovedor.Name = "BoxNameProovedor";
@@ -251,6 +270,7 @@
             // 
             // BoxPrecioVenta
             // 
+            this.BoxPrecioVenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxPrecioVenta.Location = new System.Drawing.Point(836, 194);
             this.BoxPrecioVenta.Name = "BoxPrecioVenta";
@@ -259,6 +279,7 @@
             // 
             // BoxCantidadVendida
             // 
+            this.BoxCantidadVendida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxCantidadVendida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxCantidadVendida.Location = new System.Drawing.Point(836, 147);
             this.BoxCantidadVendida.Name = "BoxCantidadVendida";
@@ -267,6 +288,7 @@
             // 
             // BoxCliente
             // 
+            this.BoxCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxCliente.Location = new System.Drawing.Point(836, 101);
             this.BoxCliente.Name = "BoxCliente";
@@ -275,6 +297,7 @@
             // 
             // Guardar
             // 
+            this.Guardar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Guardar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar.ForeColor = System.Drawing.Color.Honeydew;
@@ -288,6 +311,7 @@
             // 
             // Modificar
             // 
+            this.Modificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Modificar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modificar.ForeColor = System.Drawing.Color.Honeydew;
@@ -301,6 +325,7 @@
             // 
             // Borrar
             // 
+            this.Borrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Borrar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Borrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Borrar.ForeColor = System.Drawing.Color.Honeydew;
@@ -314,6 +339,7 @@
             // 
             // Buscar
             // 
+            this.Buscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Buscar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar.ForeColor = System.Drawing.Color.Honeydew;
@@ -327,6 +353,7 @@
             // 
             // BoxNameFrutaGet
             // 
+            this.BoxNameFrutaGet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxNameFrutaGet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxNameFrutaGet.Location = new System.Drawing.Point(1236, 130);
             this.BoxNameFrutaGet.Name = "BoxNameFrutaGet";
@@ -335,6 +362,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(1115, 133);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -345,6 +373,7 @@
             // 
             // BoxID
             // 
+            this.BoxID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxID.Location = new System.Drawing.Point(91, 14);
             this.BoxID.Name = "BoxID";
@@ -353,6 +382,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(49, 20);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -365,6 +395,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(52, 334);
             this.dataGridView1.Name = "dataGridView1";
@@ -374,6 +405,7 @@
             // 
             // BoxTime
             // 
+            this.BoxTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BoxTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.BoxTime.Location = new System.Drawing.Point(836, 240);
             this.BoxTime.Name = "BoxTime";
@@ -382,6 +414,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(788, 311);
@@ -393,6 +426,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(492, 311);
@@ -404,6 +438,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(87, 311);
@@ -415,6 +450,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(288, 16);
             this.label14.Name = "label14";
