@@ -16,14 +16,13 @@ namespace InterfazFruta
         public app()
         {
             InitializeComponent();            
-            Alldata();
-            
+            Alldata();           
 
         }
         //Boton guardar,introducir todos los datos excepto ID(POST)
         private async void Guardar_Click(object sender, EventArgs e)
         {
-            //string responseContent = "";
+            
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44396/api/frutas");
             var content = new StringContent("{\r\n        \"Id\": \""+ BoxID.Text +"\",\r\n        \"NombreFruta\": \""+ BoxNameFruta.Text +"\",\r\n " +
@@ -38,9 +37,7 @@ namespace InterfazFruta
             if (!response.IsSuccessStatusCode)
             {
                 MessageBox.Show("Ya existe la fruta");
-                
-                //responseContent = await response.Content.ReadAsStringAsync();
-               
+                                             
                 
                 return;
             }
@@ -64,7 +61,7 @@ namespace InterfazFruta
         //Boton modificar,introducir ID y datos a modificar(PUT)
         private async void Modificar_Click(object sender, EventArgs e)
         {
-            string responseContent = "";
+            
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Put, "https://localhost:44396/api/frutas/"+ BoxID.Text);
             var content = new StringContent("{\r\n        \"Id\": \"" + BoxID.Text + "\",\r\n        \"NombreFruta\": \"" + BoxNameFruta.Text + "\",\r\n " +
@@ -79,7 +76,7 @@ namespace InterfazFruta
             {
                 MessageBox.Show($"Error: {response.StatusCode}");
 
-                responseContent = await response.Content.ReadAsStringAsync();
+                
                 
                 
                 return;
